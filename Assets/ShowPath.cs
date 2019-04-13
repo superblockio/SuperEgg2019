@@ -11,6 +11,8 @@ public class ShowPath : MonoBehaviour
     {
         path = new NavMeshPath();
         elapsed = 0.0f;
+        NavMeshAgent agent = GetComponent< NavMeshAgent > ();
+        agent.destination = target.transform.position;
     }
 
     void Update()
